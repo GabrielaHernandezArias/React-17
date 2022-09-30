@@ -24,7 +24,7 @@ class LoginControl extends React.Component {
 
   // 4. render method
   render() {
-    const isLoggedIn = this.state.isLoggedIn;
+    const isLoggedIn = this.state.isLoggedIn;      // defining const isLoggedIn within render method
     let button;
 
     // conditional rendering
@@ -44,7 +44,7 @@ class LoginControl extends React.Component {
   }  // closing render
 } // closing the class Login Control
 
-// 5. functions that return some UX/UI 
+// 5. functions that return some UX/UI (two headers and two buttons)
 function UserGreeting(props) {
   return <h1>Welcome back!</h1>;
 }
@@ -54,7 +54,7 @@ function GuestGreeting(props) {
 }
 
 function Greeting(props) {
-  const isLoggedIn = props.isLoggedIn;
+  const isLoggedIn = props.isLoggedIn;           // passing on the constant isLoggedIn to props.isLoggedIn
   if (isLoggedIn) {
     return <UserGreeting />;
   }
